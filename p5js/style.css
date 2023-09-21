@@ -7,8 +7,81 @@ canvas {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
+  
+}
+
+h1 {
+  display: block;
+  color: #B37548;
+  text-align: center;
+  font-style: oblique 10deg;
+  
+  
+}
+
+h2{
+text-align: center;
+color: #012583;
+font-style: italic;
+
+}
+h3{
+  color:#012583;
+  margin-left: 5%;
+}
+
+p{
+  margin-top: auto;
+}
+
+table{
+  margin-left: auto;
+  margin-right: 5px;  
+  margin-top: 5px;
+  
 }
 
 
+img{
+ 
+      width: 370px;
+      height: 400px;
+      border: 3px solid #DBB5A2;
+      margin-top: 10px;
+      padding: 5px;
+}
 
+.img2{
+  padding: 1px;
+  margin-top: 1px;
+  width: 100px;
+  height: 100px;
+}
+.left{
+  text-align: left;
+  float: left;
+  margin-left: 5%;
+}
+.textfloatright{
+  margin-left: 10%;
+}
+.right{
+  background-color: rgba(0,0,0,0);
+  text-align: right;
+  margin-right: 5%;
+  
+}
+
+figure {
+   display: block;
+   margin: 0;
+   padding: 0;
+}
+figcaption {
+   font-family: Arial, sans-serif;
+   font-size: 14px;
+   font-weight: bold;
+   color: black;
+   margin-top: 1px;
+   padding: 5px;
+}

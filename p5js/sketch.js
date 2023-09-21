@@ -1,58 +1,59 @@
-var doggo;
-var cat;
-var meow;
+
+var stupid;
+var running;
+var canvas;
+var bench;
+
+function windowResized() {
+
+  resizeCanvas(windowWidth, windowHeight);
+
+}
+
 
 function preload(){
 
-doggo = loadImage("../media/images/doggo.jpg");
 
-cat = createImg("https://i.imgflip.com/3zixqd.png");
-
-meow = loadSound("media/audio/meow.wav");
+bench = loadImage("../media/images/f-13092.jpg")
+running = loadImage("../media/images/giphy.gif")
+stupid = loadSound("../media/audio/8d82b5_Forrest_Stupid_is_as_Stupid_does_Sir_Sound_Effect.mp3");
 
 
 }
+
 
 function setup() {
 
-  createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0,0);
+  canvas.style('z-index', '-1');
+  
+  
+
 }
 
 function draw() {
-  background(220);
+  background("#B5D5EC");
 
-  rect(50, 50, 100, 100);
-
-
-  push()
-    fill("red");
-    ellipse(100,100, 150);
-  pop()
-
-  fill("blue");
-  beginShape();
-    vertex(180,82);
-    vertex(207,36);
-    vertex(214,63);
-    vertex(407,11);
-    vertex(412,30);
-    vertex(219,82);
-    vertex(226,109);
-  endShape(CLOSE);
-
-
-  arc(200,200,80,80,0,PI);
-  arc(300,300,80,80,3.14,2*PI);
-  arc(300,400,80,80,1.57,PI);
-  arc(300,500,80,80,-3, PI);
-
-  image(doggo, 300,300,100,100);
-  cat.position(0,0);
-  cat.size(200,200);
+  
+  if(mouseIsPressed){
+    stupid.play();
+   }
+   
+ 
+  image (running, mouseX-20,mouseY-20,100,100,100);
+  image (bench, windowWidth/2,windowHeight/2-100,500,400,200 )
 
   
   push()
-  fill(0)
-  text(mouseX + "," + mouseY, 20, 20)
+  fill("#2B1A0A")
+  textSize(20);
+  text("Favorite Qoute:\n", windowWidth/2-100,windowHeight/2-100)
   pop()
+  push()
+  textSize(30)
+  fill("#012583")
+  text("\"Mama Always Said, Life Was Like a Box of Chocolates!\"",windowWidth/2-400,windowHeight/2-50)
+  pop()
+
 }
